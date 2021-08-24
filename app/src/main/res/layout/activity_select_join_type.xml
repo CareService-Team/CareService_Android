@@ -23,7 +23,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnSocialWorker"
+            android:id="@+id/btnWelfareWorkerJoin"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="24dp"
@@ -32,16 +32,16 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:text="사회 복지사"
-            app:backgroundTint="#F59A9A" />
+            app:backgroundTint="@color/defaultBtnColor" />
 
         <Button
-            android:id="@+id/btnElderly"
+            android:id="@+id/btnSenileJoin"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_weight="1"
             android:text="노약자"
-            app:backgroundTint="#F59A9A" />
+            app:backgroundTint="@color/defaultBtnColor" />
     </LinearLayout>
 </LinearLayout>

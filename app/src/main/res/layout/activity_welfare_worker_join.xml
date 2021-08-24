@@ -306,7 +306,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="위치정보 이용약관 동의(선택)" />
+                    android:text="위치정보 이용약관 동의(필수)" />
 
                 <ScrollView
                     android:layout_width="match_parent"
@@ -326,15 +326,36 @@
                     </LinearLayout>
                 </ScrollView>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <Button
-                    android:id="@+id/btnWorkerJoinOk"
-                    android:layout_width="match_parent"
+                    android:id="@+id/btnWelfareWorkerJoinOk"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
                     android:onClick="onClick"
                     android:text="완료"
-                    app:backgroundTint="#F29C9C" />
+                    app:backgroundTint="@color/defaultBtnColor" />
 
+                <Button
+                    android:id="@+id/btnWelfareWorkerJoinCancel"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="onClick"
+                    android:text="취소"
+                    app:backgroundTint="@color/secondBtnColor" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
