@@ -11,8 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-46dp"
-        tools:layout_editor_absoluteY="-127dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
@@ -42,7 +44,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/sName"
+                    android:id="@+id/etName_senilePage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="이름"
@@ -114,7 +116,7 @@
                         app:backgroundTint="@color/white" />
 
                     <ImageButton
-                        android:id="@+id/mypageSBtn"
+                        android:id="@+id/btnMyInfo_senilePage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -149,7 +151,7 @@
                         app:backgroundTint="@color/white" />
 
                     <ImageButton
-                        android:id="@+id/thingSBtn"
+                        android:id="@+id/btnThing_senilePage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -185,7 +187,7 @@
                         app:backgroundTint="@color/white" />
 
                     <ImageButton
-                        android:id="@+id/listSBtn"
+                        android:id="@+id/btnThingList_senilePage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
@@ -227,7 +229,7 @@
                         app:backgroundTint="@color/white" />
 
                     <ImageButton
-                        android:id="@+id/matchinSBtn"
+                        android:id="@+id/btnMatching_senilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -259,7 +261,7 @@
                         app:backgroundTint="@color/white" />
 
                     <ImageButton
-                        android:id="@+id/mapSBtn"
+                        android:id="@+id/btnMap_senilePage"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:background="@android:color/transparent"
@@ -271,7 +273,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/logoutSBtn"
+            android:id="@+id/btnLogout_senilePagen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"

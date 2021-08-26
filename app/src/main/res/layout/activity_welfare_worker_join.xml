@@ -8,27 +8,46 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView3"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
-                    android:text="사회 복지사 회원가입"
-                    android:textSize="20sp"
-                    tools:textStyle="bold" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/main_icon" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/welfareWorkerJoinTitle"
+                        android:textSize="24sp"
+                        tools:textStyle="bold" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -48,7 +67,7 @@
                         android:text="이름" />
 
                     <EditText
-                        android:id="@+id/etWorkerName"
+                        android:id="@+id/etName_welfareWorkerJoin"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -56,7 +75,7 @@
                         android:layout_marginRight="24dp"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="이름을 입력하시오."
+                        android:hint="@string/joinNameContent"
                         android:inputType="textPersonName" />
                 </LinearLayout>
 
@@ -89,13 +108,13 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/WorkerFemale"
+                            android:id="@+id/rbFemale_welfareWorkerJoin"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="여" />
 
                         <RadioButton
-                            android:id="@+id/WorkerMale"
+                            android:id="@+id/rbMale_welfareWorkerJoin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -121,7 +140,7 @@
                         android:text="생년월일" />
 
                     <EditText
-                        android:id="@+id/etWorkerDate"
+                        android:id="@+id/etBirth_welfareWorkerJoin"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="24dp"
@@ -147,7 +166,7 @@
                         android:text="전화번호" />
 
                     <EditText
-                        android:id="@+id/etWorkerPhone"
+                        android:id="@+id/etPhone_welfareWorkerJoin"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="24dp"
@@ -174,17 +193,17 @@
                         android:text="id" />
 
                     <EditText
-                        android:id="@+id/etWorkerId"
+                        android:id="@+id/etId_welfareWorkerJoin"
                         android:layout_width="173dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="아이디를 입력하시오"
+                        android:hint="@string/joinIdContent"
                         android:inputType="textPersonName" />
 
                     <Button
-                        android:id="@+id/btnWorkerIdCheck"
+                        android:id="@+id/btnIdCheck_welfareWorkerJoin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -192,7 +211,7 @@
                         android:layout_marginRight="24dp"
                         android:layout_weight="1"
                         android:text="중복 확인"
-                        app:backgroundTint="#2196F3" />
+                        app:backgroundTint="@color/thirdBtnColor" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -211,7 +230,7 @@
                         android:text="pwd" />
 
                     <EditText
-                        android:id="@+id/etWorkerPwd"
+                        android:id="@+id/etPwd_welfareWorkerJoin"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="24dp"
@@ -237,7 +256,7 @@
                         android:text="pwd 확인" />
 
                     <EditText
-                        android:id="@+id/etWorkerCheckPwd"
+                        android:id="@+id/etPwdCheck_welfareWorkerJoin"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="24dp"
@@ -264,7 +283,7 @@
                         android:text="사회복지사 자격증 사진 첨부" />
 
                     <Button
-                        android:id="@+id/btnWorkerImage"
+                        android:id="@+id/btnImage_welfareWorkerJoin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -272,11 +291,11 @@
                         android:layout_marginRight="24dp"
                         android:layout_weight="1"
                         android:text="사진 첨부"
-                        app:backgroundTint="#2196F3" />
+                        app:backgroundTint="@color/thirdBtnColor" />
                 </LinearLayout>
 
                 <CheckBox
-                    android:id="@+id/cbWorkerPersonal"
+                    android:id="@+id/cbPersonal_welfareWorkerJoin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -302,7 +321,7 @@
                 </ScrollView>
 
                 <CheckBox
-                    android:id="@+id/cbWorkerLocation"
+                    android:id="@+id/cbLocation_welfareWorkerJoin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -336,17 +355,17 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnWelfareWorkerJoinOk"
+                    android:id="@+id/btnOk_welfareWorkerJoin"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginLeft="24dp"
                     android:onClick="onClick"
-                    android:text="완료"
+                    android:text="@string/ok"
                     app:backgroundTint="@color/defaultBtnColor" />
 
                 <Button
-                    android:id="@+id/btnWelfareWorkerJoinCancel"
+                    android:id="@+id/btnCancel_welfareWorkerJoin"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -354,7 +373,7 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginRight="24dp"
                     android:onClick="onClick"
-                    android:text="취소"
+                    android:text="@string/cancel"
                     app:backgroundTint="@color/secondBtnColor" />
             </LinearLayout>
         </LinearLayout>
