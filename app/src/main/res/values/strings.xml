@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">care</string>
+    <string name="app_name">Care Service</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Personal_information">
@@ -192,6 +192,7 @@ eXpert 서비스 및 eXpert 센터 가입 등록정보 : 신청일로부터 6개
     <string name="ok">확인</string>
     <string name="cancel">취소</string>
     <string name="confirmNum">인증번호</string>
+    <string name="back">뒤로가기</string>
 
     // 회원 가입
     <string name="joinSuccess">회원 가입 성공</string>

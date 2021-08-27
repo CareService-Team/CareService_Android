@@ -19,13 +19,13 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="24dp"
             app:srcCompat="@drawable/hand_pull" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="12dp"
             android:background="#9F9D9D" />
 
         <LinearLayout
@@ -73,14 +73,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="40dp"
             android:text="무엇이 필요하신가요?"
             android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:text="로그아웃"
