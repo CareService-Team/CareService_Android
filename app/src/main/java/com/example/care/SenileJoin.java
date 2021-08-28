@@ -20,14 +20,14 @@ public class SenileJoin extends AppCompatActivity {
 
         switch(v.getId()){
             // 회원 가입 완료하면 MainActivity로 이동
-            case R.id.btnSenileJoinOk:
+            case R.id.btnOk_senileJoin:
                 Intent intent = new Intent(SenileJoin.this, MainActivity.class);
                // intent.putExtra(sJoinKey, msg);
                 Toast.makeText(this, R.string.joinSuccess, Toast.LENGTH_SHORT).show();
                 startActivity(intent);
                 break;
             // 회원 가입 취소하면 가입 유형 선택 페이지로 이동
-            case R.id.btnSenileJoinCancel:
+            case R.id.btnCancel_senileJoin:
                 Toast.makeText(this, R.string.joinCancel, Toast.LENGTH_SHORT).show();
                 //setResult(RESULT_CANCELED);
                 break;

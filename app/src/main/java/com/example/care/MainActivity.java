@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
            switch (v.getId()){
                // 회원가입 버튼 클릭 시 가입 유형 페이지로 넘어감
-               case R.id.btnJoin:
+               case R.id.btnJoin_main:
                    intent = new Intent(MainActivity.this, SelectJoinType.class);
                    startActivity(intent);
                    break;
 
                // 로그인 성공 조건 만족하면, 각 유형 별 로그인 페이지로 이동
-               case R.id.btnLogin:
+               case R.id.btnLogin_main:
                    RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup);
                    int id = rg.getCheckedRadioButtonId();
                    RadioButton rb = (RadioButton)findViewById(id);
@@ -59,13 +59,13 @@ public class MainActivity extends AppCompatActivity {
                    break;
 
                // id 찾기 페이지로 넘어감
-               case R.id.btnFindId:
+               case R.id.btnFindId_main:
                    intent = new Intent(MainActivity.this, FindIdPage.class);
                    startActivity(intent);
                    break;
 
                // 비밀번호 찾기 페이지로 넘어감
-               case R.id.btnFindPwd:
+               case R.id.btnFindPwd_main:
                    intent = new Intent(MainActivity.this, FindPwdPage.class);
                    startActivity(intent);
                    break;

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 public class SelectJoinType extends AppCompatActivity {
     final static int WELFARE_JOIN_ACTIVITY_CODE = 100;
@@ -21,12 +20,12 @@ public class SelectJoinType extends AppCompatActivity {
         Intent intent;
         switch (v.getId()){
             // 각 유형 별 회원 가입 페이지로 넘어감
-            case R.id.btnWelfareWorkerJoin:
+            case R.id.btnWelfareWorker_selectJoinType:
                 intent = new Intent(SelectJoinType.this, WelfareWorkerJoin.class);
                 startActivity(intent);
               //  startActivityForResult(intent, WELFARE_JOIN_ACTIVITY_CODE);
                 break;
-            case R.id.btnSenileJoin:
+            case R.id.btnSenile_selectJoinType:
                 intent = new Intent(SelectJoinType.this, SenileJoin.class);
                 startActivity(intent);
               //  startActivityForResult(intent, SENILE_JOIN_ACTIVITY_CODE);

@@ -9,19 +9,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="24dp"
             app:srcCompat="@drawable/hand_pull" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="12dp"
             android:background="#9F9D9D" />
 
         <LinearLayout
@@ -39,7 +43,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/wName"
+                    android:id="@+id/etName_welfareWorkerPage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="이름"
@@ -69,19 +73,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="40dp"
             android:text="무엇이 필요하신가요?"
             android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/mypageWBtn"
+                android:id="@+id/btnMyInfo_welfareWorkerPage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -90,7 +94,7 @@
                 app:srcCompat="@drawable/mypage_btn" />
 
             <ImageButton
-                android:id="@+id/matchingWBtn"
+                android:id="@+id/btnMatching_welfareWorkerPage"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -100,7 +104,7 @@
                 app:srcCompat="@drawable/matching_btn" />
 
             <ImageButton
-                android:id="@+id/mapWBtn"
+                android:id="@+id/btnMap_welfareWorkerPage"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="24dp"
@@ -113,12 +117,12 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/logoutWBtn"
+            android:id="@+id/btnLogour_welfareWorkerPage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:text="로그아웃"

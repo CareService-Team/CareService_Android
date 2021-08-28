@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="defaultBtnColor">#FCB00D</color>
     <color name="secondBtnColor">#DACFCF</color>
+    <color name="thirdBtnColor">#03A9F4</color>
 </resources>
