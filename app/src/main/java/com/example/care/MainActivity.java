@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -14,19 +16,21 @@ public class MainActivity extends AppCompatActivity {
 
        @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+           StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+           StrictMode.setThreadPolicy(policy);
+
+           super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        Button go = findViewById(R.id.go);
+        Button go = findViewById(R.id.btnJoin_main);
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Worker.class);
+                Intent intent = new Intent(MainActivity.this, MyInfo.class);
+//                intent = new Intent(getApplicationContext(), Worker.class);
                 startActivity(intent);
             }
         });
-        */
 
         // 회원 가입 후 회원 정보 db에 저장 하는 코드 작성 필요
         Intent intent = getIntent();
@@ -39,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
            switch (v.getId()){
                // 회원가입 버튼 클릭 시 가입 유형 페이지로 넘어감
                case R.id.btnJoin_main:
-                   intent = new Intent(MainActivity.this, SelectJoinType.class);
-                   startActivity(intent);
+//                   intent = new Intent(MainActivity.this, SelectJoinType.class);
+//                   startActivity(intent);
                    break;
 
                // 로그인 성공 조건 만족하면, 각 유형 별 로그인 페이지로 이동
