@@ -2,13 +2,30 @@ package com.example.care;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.android.volley.Request;
+import com.example.care.model.Senile;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
     String sJoinKey = "SenileJoinSuccess";
@@ -16,17 +33,24 @@ public class MainActivity extends AppCompatActivity {
 
        @Override
     protected void onCreate(Bundle savedInstanceState) {
-           StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-           StrictMode.setThreadPolicy(policy);
+//           StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+//           StrictMode.setThreadPolicy(policy);
 
            super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        globalVars.httpHandler = new HttpHandler(getApplicationContext(), "http://13.124.253.151:8080");
+        // TODO: Check if API Server is online
+
+        // TODO: login and use token rather than storing id in globalVars
+        globalVars.ID = "111";
+        globalVars.type = globalVars.UserType.SENILE;
 
         Button go = findViewById(R.id.btnJoin_main);
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MyInfo.class);
+                Intent intent = new Intent(MainActivity.this, SenilePage.class);
 //                intent = new Intent(getApplicationContext(), Worker.class);
                 startActivity(intent);
             }
@@ -76,5 +100,4 @@ public class MainActivity extends AppCompatActivity {
            }
 
     }
-
 }

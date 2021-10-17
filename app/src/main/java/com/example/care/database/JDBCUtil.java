@@ -17,12 +17,7 @@ public class JDBCUtil {
 				resultSetConcurrency = ResultSet.CONCUR_READ_ONLY;
 
 	// 기본 생성자
-	public JDBCUtil() {
-		conn = connMan.getConn();
-		if(conn == null){
-			System.out.println("conn is null ERROR!");
-		}
-	}
+	public JDBCUtil() {}
 
 	/*
 	// 매개변수 없는 query를 전달받아 query를 설정하는 생성자
@@ -82,11 +77,8 @@ public class JDBCUtil {
 
 	// 현재의  PreparedStatement를 반환
 	private PreparedStatement getPreparedStatement() throws SQLException {
-		if (conn == null) {
-			conn.setAutoCommit(false);
-		}
 		if (pstmt != null) pstmt.close();
-		pstmt = conn.prepareStatement(sql, resultSetType, resultSetConcurrency);
+		pstmt = ConnectionManager.getConn().prepareStatement(sql, resultSetType, resultSetConcurrency);
 		// JDBCUtil.printDataSourceStats(ds);
 		return pstmt;
 	}
@@ -122,11 +114,8 @@ public class JDBCUtil {
 
 	// 현재의  CallableStatement를 반환
 	private CallableStatement getCallableStatement() throws SQLException {
-		if (conn == null) {
-			conn.setAutoCommit(false);
-		}
 		if (cstmt != null) cstmt.close();
-		cstmt = conn.prepareCall(sql);
+		cstmt = ConnectionManager.getConn().prepareCall(sql);
 		return cstmt;
 	}
 
@@ -165,19 +154,11 @@ public class JDBCUtil {
 				ex.printStackTrace();
 			}
 		}
-		if (conn != null) {
-			try {
-				conn.close();
-				conn = null;
-			} catch (SQLException ex) {
-				ex.printStackTrace();
-			}
-		}
 	}
 
 	public void commit() {
 		try {
-			conn.commit();
+			ConnectionManager.getConn().commit();
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
@@ -185,7 +166,7 @@ public class JDBCUtil {
 
 	public void rollback() {
 		try {
-			conn.rollback();
+			ConnectionManager.getConn().rollback();
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
