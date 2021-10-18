@@ -1,20 +1,20 @@
 package com.example.care;
 
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.example.care.database.UserDAO;
-import com.example.care.model.User;
-import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +27,7 @@ public class MyInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_info);
 
-        Button button = findViewById(R.id.button);
+        Button btnUpdate = findViewById(R.id.btnUpdate_myInfo);
         EditText nameInput = findViewById(R.id.nameEditText);
         EditText passwordInput = findViewById(R.id.passwordEditText);
         EditText addrInput = findViewById(R.id.addrEditText);
@@ -54,6 +54,32 @@ public class MyInfo extends AppCompatActivity {
                         Log.w(TAG, "onErrorResponse: ", error);
                     }
                 });
+
+        btnUpdate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dlg = new AlertDialog.Builder(MyInfo.this);
+
+                dlg.setTitle("수정")
+                        .setMessage("정보를 수정하시겠습니까?")
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // 디비 수정 작업 필요
+
+                                Toast.makeText(MyInfo.this, "수정이 완료되었습니다.", Toast.LENGTH_LONG).show();
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .show();
+            }
+        });
 
 //        System.out.println(nameInput.getText());
 //        System.out.println(passwordInput.getText());

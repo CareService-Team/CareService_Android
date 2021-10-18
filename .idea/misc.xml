@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_application_thing.xml" value="0.22395833333333334" />
         <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_check_thing.xml" value="0.22395833333333334" />
         <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_my_info.xml" value="0.22395833333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_senile_page.xml" value="0.22395833333333334" />
       </map>
     </option>
   </component>

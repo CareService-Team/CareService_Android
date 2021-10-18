@@ -6,7 +6,7 @@ import javax.sql.DataSource;
 import java.sql.DriverManager;
 
 public class ConnectionManager {
-	private static final String DB_URL = "jdbc:mysql://3.34.133.71:3306/care_db?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul";
+	private static final String DB_URL = "jdbc:mysql://54.180.156.89:3306/care_db?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul";
     private static final String DB_USERNAME = "kim";
     private static final String DB_PASSWORD = "rnfl123";
     private static DataSource ds = null;

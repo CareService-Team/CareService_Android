@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class SelectJoinType extends AppCompatActivity {
     final static int WELFARE_JOIN_ACTIVITY_CODE = 100;
@@ -15,23 +16,42 @@ public class SelectJoinType extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_join_type);
 
-    }
-    public void onClick(View v) {
-        Intent intent;
-        switch (v.getId()){
-            // 각 유형 별 회원 가입 페이지로 넘어감
-            case R.id.btnWelfareWorker_selectJoinType:
-                intent = new Intent(SelectJoinType.this, WelfareWorkerJoin.class);
+        Button welfareType = findViewById(R.id.btnWelfareWorker_selectJoinType);
+        Button senileType = findViewById(R.id.btnSenile_selectJoinType);
+
+        welfareType.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SelectJoinType.this, WelfareWorkerJoin.class);
                 startActivity(intent);
-              //  startActivityForResult(intent, WELFARE_JOIN_ACTIVITY_CODE);
-                break;
-            case R.id.btnSenile_selectJoinType:
-                intent = new Intent(SelectJoinType.this, SenileJoin.class);
+            }
+        });
+
+        senileType.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SelectJoinType.this, SenileJoin.class);
                 startActivity(intent);
-              //  startActivityForResult(intent, SENILE_JOIN_ACTIVITY_CODE);
-                break;
-        }
+            }
+        });
+
     }
+//    public void onClick(View v) {
+//        Intent intent;
+//        switch (v.getId()){
+//            // 각 유형 별 회원 가입 페이지로 넘어감
+//            case R.id.btnWelfareWorker_selectJoinType:
+//
+//              //  startActivityForResult(intent, WELFARE_JOIN_ACTIVITY_CODE);
+//                break;
+//            case R.id.btnSenile_selectJoinType:
+//                intent = new Intent(SelectJoinType.this, SenileJoin.class);
+//                startActivity(intent);
+//              //  startActivityForResult(intent, SENILE_JOIN_ACTIVITY_CODE);
+//                break;
+//        }
+//    }
 
 /*    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

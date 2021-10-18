@@ -39,19 +39,29 @@ public class MainActivity extends AppCompatActivity {
            super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        globalVars.httpHandler = new HttpHandler(getApplicationContext(), "http://13.124.253.151:8080");
+        globalVars.httpHandler = new HttpHandler(getApplicationContext(), "http://54.180.156.89:8080");
         // TODO: Check if API Server is online
 
         // TODO: login and use token rather than storing id in globalVars
         globalVars.ID = "111";
         globalVars.type = globalVars.UserType.SENILE;
 
-        Button go = findViewById(R.id.btnJoin_main);
+        Button joinGo = findViewById(R.id.btnJoin_main);
+        Button go = (Button) findViewById(R.id.btnLogin_main);
+
+        joinGo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SelectJoinType.class);
+                startActivity(intent);
+            }
+        });
+
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SenilePage.class);
-//                intent = new Intent(getApplicationContext(), Worker.class);
+                //intent = new Intent(getApplicationContext(), Worker.class);
                 startActivity(intent);
             }
         });
@@ -62,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         String wData = intent.getStringExtra(wJoinKey);
     }
 
-    public void onClick(View v) {
+    /*public void onClick(View v) {
         Intent intent;
            switch (v.getId()){
                // 회원가입 버튼 클릭 시 가입 유형 페이지로 넘어감
@@ -99,5 +109,5 @@ public class MainActivity extends AppCompatActivity {
                    break;
            }
 
-    }
+    }*/
 }
