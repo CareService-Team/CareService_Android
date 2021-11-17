@@ -113,11 +113,48 @@
                 android:layout_marginRight="24dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitXY"
+                android:visibility="gone"
                 app:srcCompat="@drawable/map_btn" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/hospital" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:text="근처 병원"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnHospital_welfareWorkerPage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/hospital" />
+
+
+        </LinearLayout>
+
         <Button
-            android:id="@+id/btnLogour_welfareWorkerPage"
+            android:id="@+id/btnLogout_welfareWorkerPage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"

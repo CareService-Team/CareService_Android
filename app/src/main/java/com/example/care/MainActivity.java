@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 //           StrictMode.setThreadPolicy(policy);
 
            super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         globalVars.httpHandler = new HttpHandler(getApplicationContext(), "http://54.180.156.89:8080");
         // TODO: Check if API Server is online

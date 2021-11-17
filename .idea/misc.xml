@@ -3,11 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/drawable/edge.xml" value="0.20052083333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/drawable/empty_top_edge.xml" value="0.20052083333333334" />
         <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_application_thing.xml" value="0.22395833333333334" />
         <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_check_thing.xml" value="0.22395833333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_hospital_list.xml" value="0.2" />
         <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_matching_list.xml" value="0.2" />
         <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_my_info.xml" value="0.22395833333333334" />
-        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_senile_page.xml" value="0.22395833333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_select_join_type.xml" value="0.18020833333333333" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_senile_page.xml" value="0.2" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/activity_welfare_worker_page.xml" value="0.18020833333333333" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/content_scrolling.xml" value="0.22395833333333334" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/hospital_list_layout.xml" value="0.264" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/matching_list_layout.xml" value="0.18020833333333333" />
+        <entry key="..\:/work/care/CareService_Android_1017/CareService_Android/app/src/main/res/layout/thing_list_layout.xml" value="0.4" />
       </map>
     </option>
   </component>

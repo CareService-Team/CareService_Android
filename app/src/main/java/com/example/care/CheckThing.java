@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -27,7 +29,7 @@ public class CheckThing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_thing);
 
-        ListView listView = findViewById(R.id.listView);
+        ListView listView =  findViewById(R.id.LayoutThing);
 
 
         // TODO: change subURL for checking senilething
@@ -49,6 +51,13 @@ public class CheckThing extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Log.w(TAG, "onErrorResponse: ", error);
+                }
+            });
+
+            findViewById(R.id.btnBack_checkList).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
                 }
             });
 

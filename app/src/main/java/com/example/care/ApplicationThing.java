@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApplicationThing extends AppCompatActivity {
+
+
 
     private static final String TAG = "ApplicationThing";
     EditText extraEditText;
@@ -105,7 +108,7 @@ public class ApplicationThing extends AppCompatActivity {
             checkBoxes.add(findViewById(chkBoxID.getChkBoxID()));
         }
         
-        extraEditText = findViewById(R.id.extraThingEditText);
+        extraEditText = (EditText) findViewById(R.id.extraThingEditText);
         btnApplication = findViewById(R.id.btnApplication_applicationThing);
 
         extraEditText.setEnabled(false);
@@ -128,6 +131,9 @@ public class ApplicationThing extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 addThing(checkBoxes);
                                 Toast.makeText(ApplicationThing.this, "물품이 신청되었습니다.", Toast.LENGTH_SHORT).show();
+
+                                Intent intent = new Intent(ApplicationThing.this, CheckThing.class);
+                                startActivity(intent);
                                 finish();
                             }
                         })
